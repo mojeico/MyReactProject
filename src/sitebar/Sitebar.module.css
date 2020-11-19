@@ -1,0 +1,24 @@
+
+.Sitebar {
+
+    grid-area: sitebar;
+    background-color: rgb(237, 238, 240);
+    padding: 20px;
+}
+
+.Item{
+    margin: 10px;
+
+}
+.Item a{
+    color: rgb(125, 156, 183);
+    text-decoration: none;
+}
+
+
+a.activeLink{
+    color: rgb(84, 113, 138);
+
+}
+
+

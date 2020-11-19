@@ -1,0 +1,13 @@
+
+.Header {
+    grid-area: header;
+    background-color: yellow;
+
+}
+
+
+.HeaderLogo {
+    height: 60px;
+}
+
+

@@ -1,38 +1,45 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.SiteWrapper {
+  display: grid;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  grid-template-areas:
+    "header header"
+    "sitebar  content"
+    "footer footer";
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+
+  grid-template-columns: 160px 800px;
+  grid-template-rows: 100px 500px 100px;
+
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  grid-gap: 10px;
+
+
 }
 
-.App-link {
-  color: #61dafb;
+
+.AppContentWrapper{
+  grid-area: content;
+  background-color: rgb(237, 238, 240);
+  border: 4px double black; /* Параметры границы */
+
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*
+
+<Photo/>
+       <ProfileInfo/>
+                    <AllPhotos/>
+                               <CreatePost/>
+                                           <MyPosts/>
+                                                    <Friends/>
+                                                             <Groups/>
+                                                                     <Music/>
+
+*/
+
+
+

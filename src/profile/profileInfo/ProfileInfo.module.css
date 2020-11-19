@@ -1,0 +1,11 @@
+.profileInfo{
+    grid-area: profileInfo;
+
+    border: 4px double black; /* Параметры границы */
+
+
+    width: 550px;
+    height: 230px;
+    background-color: red;
+
+}
