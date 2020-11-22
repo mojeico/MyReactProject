@@ -9,6 +9,11 @@
 
 }
 
+
+.dialogsItems .active {
+    color: gold;
+}
+
 .dialogsItems {
     padding: 10px;
     grid-area: dialogsItems;

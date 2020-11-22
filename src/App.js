@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import React, {Component} from 'react';
@@ -8,38 +7,39 @@ import {BrowserRouter, Route} from "react-router-dom";
 
 import './App.css';
 
+import Dialogs from "./dialogs/Dialogs";
+
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Sitebar from "./sitebar/Sitebar";
-import Dialog from "./dialogs/Dialogs";
 import Profile from "./profile/Profile";
 
 
 const App = (props) => {
-  return (
+    return (
 
-      <BrowserRouter>
+        <BrowserRouter>
 
-        <div className='SiteWrapper'>
+            <div className='SiteWrapper'>
 
-          <Header/>
-          <Sitebar/>
+                <Header/>
+                <Sitebar/>
 
-          <div className='AppContentWrapper'>
+                <div className='AppContentWrapper'>
 
-            <Route exact path='/profile' component={Profile}/>
-            <Route exact path='/dialog' component={Dialog}/>
+                    <Route exact path='/profile' render={() => <Profile/>}/>
+                    <Route exact path='/dialog' render={() => <Dialogs state={props.state} />}/>
 
-          </div>
+                </div>
 
-          {/*
+                {/*
                     <Footer/>
 */}
-        </div>
+            </div>
 
-      </BrowserRouter>
+        </BrowserRouter>
 
-  );
+    );
 }
 
 export default App;

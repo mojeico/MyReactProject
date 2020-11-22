@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import DialogItem from "./dialogs/dialogItem/DialogsItem";
+import Message from "./dialogs/message/Message";
+
+import state from './state'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App state={state}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

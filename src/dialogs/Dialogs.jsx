@@ -1,42 +1,39 @@
-import React, {Component, createRef} from "react";
+import React from "react";
 
 import classes from './Dialogs.module.css'
 
-import Message from "./message/Message";
-import Dialog from "./dialog/Dialog";
 
-const Dialogs = () => {
+const Dialogs = (props) => {
 
 
+    return (
 
 
+        <div className={classes.dialogs}>
+
+            <div className={classes.dialogsItems}>
 
 
-
-
-
-
-        return (
-
-            <div className={classes.dialogs}>
-
-                <div className={classes.dialogsItems}>
-                </div>
-
-                <div className={classes.messageList}>
-                    <p>Choose a Dialog</p>
-
-                    <textarea  ></textarea>
-
-                    <button >Click</button>
-                    {/*<Message id='123'/>*/}
-
-                </div>
-
+                {props.state.newDialogs}
 
             </div>
 
-        );
+
+            <div className={classes.messageList}>
+                {/* <p>Choose a Dialog</p>
+
+                <textarea></textarea>
+
+                <button>Click</button>*/}
+
+                {props.state.newMessage}
+
+            </div>
+
+
+        </div>
+
+    );
 
 }
 

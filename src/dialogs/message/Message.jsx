@@ -1,18 +1,20 @@
-import React, {Component} from "react";
-import classes from './Message.module.css'
+import React, {Component, createRef} from "react";
+
+import classes from '../Dialogs.module.css'
 
 
 
-const Message = () => {
 
-        return (
-            <div>
-{/*
-                <p>{this.props.message}</p>
-*/}
-            </div>
-        );
 
+const Message = (proprs) => {
+
+    return (
+
+        <div>
+            {proprs.message}
+
+        </div>
+    )
 }
 
 export default Message
