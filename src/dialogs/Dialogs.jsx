@@ -14,19 +14,19 @@ const Dialogs = (props) => {
             <div className={classes.dialogsItems}>
 
 
-                {props.state.newDialogs}
+                {props.state.dialogsData}
 
             </div>
 
 
             <div className={classes.messageList}>
-                {/* <p>Choose a Dialog</p>
+                 <p>Choose a Dialog</p>
 
                 <textarea></textarea>
 
-                <button>Click</button>*/}
+                <button>Click</button>
 
-                {props.state.newMessage}
+                {props.state.messageMy}
 
             </div>
 
