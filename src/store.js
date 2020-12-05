@@ -1,7 +1,11 @@
 import DialogItem from "./dialogs/dialogItem/DialogsItem";
 import Message from "./dialogs/message/Message";
 import React from "react";
+import dialogReducer from "./redux/dialog-reducer";
 
+
+const ADD_POST = 'ADD_POST'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
 
 let store = {
     _state: {
@@ -31,24 +35,16 @@ let store = {
     _callSubscriber() {
         console.log("bl bla bla")
     },
-    addPost(post) {
-        this._state.messageMy.push(<Message id={9} message={post}/>)
-        this._state.newPostText = '';
-        this._callSubscriber(this._state)
-        debugger
-    },
-    changeNewPost(newText) {
-        this._state.newPostText = newText;
-        this._callSubscriber(this._state)
-    },
     subscribe(observer) {
         this._callSubscriber = observer
     },
 
+    dispatch(action) {
+        this._state = dialogReducer(this._state, action)
 
-    dispatch(action){
+        this._callSubscriber(this._state)
+        debugger
 
-        
     }
 }
 
