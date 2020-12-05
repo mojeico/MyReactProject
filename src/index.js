@@ -5,28 +5,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-import {addPost} from "./state";
 
-import {subscribe} from "./state";
 
 import {BrowserRouter} from "react-router-dom";
-import {changeNewPost} from "./state";
 
-import state from "./state";
+import store from "./state";
 
 let rerenderEntireTree = (state) => {
 
 
+    debugger
+
     ReactDOM.render(
         <BrowserRouter>
-            <App state={state} addPost={addPost} changeNewPost={changeNewPost}/>
+
+            <App state={state} addPost={store.addPost.bind(store)} changeNewPost={store.changeNewPost.bind(store)}/>
         </BrowserRouter>,
         document.getElementById('root')
     );
 }
 
-rerenderEntireTree(state)
-subscribe(rerenderEntireTree)
+debugger
+
+rerenderEntireTree(store.getState())
+store.subscribe(rerenderEntireTree)
 
 
 

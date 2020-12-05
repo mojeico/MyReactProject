@@ -16,6 +16,9 @@ import Profile from "./profile/Profile";
 
 
 const App = (props) => {
+
+    debugger
+
     return (
 
         <BrowserRouter>
