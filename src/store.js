@@ -43,7 +43,7 @@ let store = {
         this._state = dialogReducer(this._state, action)
 
         this._callSubscriber(this._state)
-        debugger
+
 
     }
 }

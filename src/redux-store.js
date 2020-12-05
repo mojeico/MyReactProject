@@ -4,7 +4,7 @@ import dialogReducer from "./redux/dialog-reducer";
 
 
 let reducers = combineReducers({
-    dialogReducer : dialogReducer
+    dialog : dialogReducer
 });
 
 let store = createStore(reducers);

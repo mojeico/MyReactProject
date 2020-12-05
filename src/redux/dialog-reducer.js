@@ -30,7 +30,6 @@ let initialData = {
 
 const dialogReducer = (state = initialData, action) => {
 
-    debugger
     switch (action.type) {
         case ADD_POST:
             state.messageMy.push(<Message id={9} message={action.post}/>)

@@ -7,6 +7,7 @@ import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import Sitebar from "./sitebar/Sitebar";
 import Profile from "./profile/Profile";
+import DialogsContainer from "./dialogs/DialogsConteiner";
 
 const App = (props) => {
 
@@ -19,7 +20,7 @@ const App = (props) => {
                 <div className='AppContentWrapper'>
                     <Route exact path='/profile' render={() => <Profile/>}/>
                     <Route exact path='/dialog'
-                           render={() => <Dialogs state={props.state} dispatch={props.dispatch}/>}/>
+                           render={() => <DialogsContainer state={props.state} dispatch={props.dispatch}/>}/>
                 </div>
                 {/*
                     <Footer/>

@@ -10,8 +10,6 @@ import store from "./redux-store";
 
 let rerenderEntireTree = (state) => {
 
-    debugger
-
     ReactDOM.render(
         <BrowserRouter>
             <App state={state} dispatch={store.dispatch.bind(store)}/>
@@ -22,6 +20,5 @@ let rerenderEntireTree = (state) => {
 
 rerenderEntireTree(store.getState())
 store.subscribe(() => {
-    debugger
     rerenderEntireTree(store.getState())
 })
