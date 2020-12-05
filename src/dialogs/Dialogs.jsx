@@ -17,7 +17,6 @@ const Dialogs = (props) => {
         console.log(val)
         props.changeNewPost(val)
     }
-    debugger
     return (
 
 

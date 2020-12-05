@@ -45,6 +45,11 @@ let store = {
         this._callSubscriber = observer
     },
 
+
+    dispatch(action){
+
+        
+    }
 }
 
 
