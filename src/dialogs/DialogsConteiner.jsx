@@ -1,6 +1,7 @@
 import React from "react";
 
 import Dialogs from "./Dialogs";
+import {connect} from "react-redux";
 
 const ADD_POST = 'ADD_POST'
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
@@ -30,5 +31,23 @@ const DialogsContainer = (props) => {
         <Dialogs updateNewPostAction={onPostChange} updateNewPostElement={onAddPost} dispatch={props.dispatch} state={props.state}/>
     );
 }
+
+
+let f1 = () => {
+
+    return{
+
+    }
+}
+
+
+let f2 = () => {
+    return{
+
+    }
+}
+
+const SuperDialogContainer = connect(f1,f2)(Dialogs)
+
 
 export default DialogsContainer
